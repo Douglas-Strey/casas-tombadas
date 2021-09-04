@@ -2,8 +2,8 @@
 
 session_start();
 
-include_once("../database/conection.php");
-include_once("../hooks/functions.php");
+include("../database/conexao.php");
+include("../hooks/functions.php");
 
 $btnRegister = filter_input(INPUT_POST, 'btnRegister', FILTER_SANITIZE_STRING);
 
@@ -13,17 +13,16 @@ if ($btnRegister) :
     $userEmail = filter_input(INPUT_POST, 'newUserEmail', FILTER_SANITIZE_STRING);
     $userPassword = filter_input(INPUT_POST, 'newPassword', FILTER_SANITIZE_STRING);
 
-    if (!empty($userName) && !empty($userNameLogin) && !empty($userEmail) && !empty($userPassword)) :
-        $hash = encript($userPassword);
-        $query = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)";
-        $data = $mysqli->prepare($query);
-        $data->bind_param("ssss", $userName, $userEmail, $userNameLogin, $hash);
-        $data->execute();
+    $hash = encript($userPassword);
+    $query = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)";
+    $data = $mysqli->prepare($query);
+    $data->bind_param("ssss", $userName, $userEmail, $userNameLogin, $hash);
+    $data->execute();
 
-        header("Location: /src/action/auth.php");
-    else :
-        redirectRegisterPage(["Todos os dados devem ser preenchidos!", "dangerCustomClass"]);
-    endif;
+    header("Location: ../index.php");
+
 else :
     redirectRegisterPage(["Página não encontrada!", "alertCustomClass"]);
 endif;
+
+$mysqli->close();

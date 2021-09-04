@@ -37,7 +37,7 @@ session_start();
                 <span>Cadastro de usuário</span>
             </div>
 
-            <form action="../auth/validateRegister.php" method="post">
+            <form action="../auth/validateRegister.php" method="POST">
                 <input type="text" id="newUserName" class="fadeIn second" name="newUserName" placeholder="Nome Completo" required>
                 <input type="text" id="newUserLogin" class="fadeIn second" name="newUserLogin" placeholder="Usu&aacute;rio" required>
                 <input type="text" id="newUserEmail" class="fadeIn second" name="newUserEmail" placeholder="E-mail" required>
