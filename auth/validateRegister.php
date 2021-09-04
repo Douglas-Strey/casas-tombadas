@@ -15,9 +15,9 @@ if ($btnRegister) :
 
     if (!empty($userName) && !empty($userNameLogin) && !empty($userEmail) && !empty($userPassword)) :
         $hash = encript($userPassword);
-        $query = "INSERT INTO cadastro (usuario, nome, email, senha) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)";
         $data = $mysqli->prepare($query);
-        $data->bind_param("ssss", $userNameLogin, $userName, $userEmail, $hash);
+        $data->bind_param("ssss", $userName, $userEmail, $userNameLogin, $hash);
         $data->execute();
 
         header("Location: /src/action/auth.php");

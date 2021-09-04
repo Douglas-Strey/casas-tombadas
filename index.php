@@ -8,25 +8,25 @@
 
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/src/style/global.css" />
-    <link rel="stylesheet" href="/src/style/custom.css" />
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/custom.css" />
 
 
-    <script src="./src/assets/libs/jquery/jquery.min.js"></script>
+    <script src="./assets/libs/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 
     <title>Casas Tombadas</title>
 </head>
 
 <?php
-include_once './src/helper/flashMessage/flash.php';
+include_once './helper/flashMessage/flash.php';
 
 session_start();
 ?>
 
 <body>
     <?php
-    include_once './src/template/navbar.phtml';
+    include_once './template/navbar.phtml';
     if (isset($_SESSION['flash_message'])) :
         getFlash();
         destroyFlash();
@@ -48,16 +48,16 @@ session_start();
 
             <div id="formFooter">
                 <a class="underlineHover" href="#">Esqueceu sua senha?</a>
-                <a class="underlineHover" href="/src/action/createAuth.php">Cadastre-se agora mesmo!</a>
+                <a class="underlineHover" href="/action/createAuth.php">Cadastre-se agora mesmo!</a>
             </div>
 
         </div>
     </div>
 
-    <script src="./src/assets/libs/jquery/jquery.min.js"></script>
-    <script src="./src/assets/libs/sweetAlert/sweetalert2.all.min.js"></script>
-    <script src="./src/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./src/js/auth.js"></script>
+    <script src="./assets/libs/jquery/jquery.min.js"></script>
+    <script src="./assets/libs/sweetAlert/sweetalert2.all.min.js"></script>
+    <script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/auth.js"></script>
 </body>
 
 </html>
