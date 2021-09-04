@@ -26,38 +26,36 @@ session_start();
 
 <body>
     <?php
-    include_once './template/navbar.phtml';
-    if (isset($_SESSION['flash_message'])) :
-        getFlash();
-        destroyFlash();
-    endif;
+    include '../template/navbar.phtml';
     ?>
-    
+
     <div class="wrapper fadeInDown">
         <div id="formContent">
 
             <div class="fadeIn first">
                 <img src="#" id="icon" alt="Logo" />
+                <span>Cadastro de usuário</span>
             </div>
 
-            <form action="../auth/validateLogin.php" method="post">
-                <input type="text" id="userLogin" class="fadeIn second" name="userLogin" autocomplete="off" placeholder="Usu&aacute;rio" required>
-                <input type="password" id="userPassword" class="fadeIn third" name="userPassword" autocomplete="off" placeholder="Senha" required>
-                <input type="submit" name="btnLogin" class="fadeIn fourth signupToast" value="Entrar">
+            <form action="../auth/validateRegister.php" method="post">
+                <input type="text" id="newUserName" class="fadeIn second" name="newUserName" placeholder="Nome Completo" required>
+                <input type="text" id="newUserLogin" class="fadeIn second" name="newUserLogin" placeholder="Usu&aacute;rio" required>
+                <input type="text" id="newUserEmail" class="fadeIn second" name="newUserEmail" placeholder="E-mail" required>
+                <input type="password" id="newPassword" class="fadeIn third" name="newPassword" placeholder="Senha" required>
+                <input type="submit" name="btnRegister" class="fadeIn fourth signupToast" value="Cadastrar">
             </form>
 
             <div id="formFooter">
-                <a class="underlineHover" href="#">Esqueceu sua senha?</a>
-                <a class="underlineHover" href="/action/createAuth.php">Cadastre-se agora mesmo!</a>
+                <a class="underlineHover" href="/index.php">Já tem um login? entre aqui</a>
             </div>
 
         </div>
     </div>
 
-    <script src="./assets/libs/jquery/jquery.min.js"></script>
-    <script src="./assets/libs/sweetAlert/sweetalert2.all.min.js"></script>
-    <script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/auth.js"></script>
+    <script src="../assets/libs/jquery/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
