@@ -1,8 +1,8 @@
 <?php
 
 $user = "root";
-$password = "!Douglas2002";
-$database = "cadastro";
+$password = "root";
+$database = "faculdade";
 $hostname = "localhost";
 
 $mysqli = new mysqli($hostname, $user, $password, $database) or die(' Erro na conexão ');

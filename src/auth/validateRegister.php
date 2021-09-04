@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once("../database/conexao.php");
+include_once("../database/conection.php");
 include_once("../hooks/functions.php");
 
 $btnRegister = filter_input(INPUT_POST, 'btnRegister', FILTER_SANITIZE_STRING);
@@ -15,9 +15,9 @@ if ($btnRegister) :
 
     if (!empty($userName) && !empty($userNameLogin) && !empty($userEmail) && !empty($userPassword)) :
         $hash = encript($userPassword);
-        $query = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO cadastro (usuario, nome, email, senha) VALUES (?, ?, ?, ?)";
         $data = $mysqli->prepare($query);
-        $data->bind_param("ssss", $userName, $userEmail, $userNameLogin, $hash);
+        $data->bind_param("ssss", $userNameLogin, $userName, $userEmail, $hash);
         $data->execute();
 
         header("Location: /src/action/auth.php");
