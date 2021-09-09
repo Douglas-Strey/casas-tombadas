@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="/style/custom.css" />
 
 
-    <script src="./assets/libs/jquery/jquery.min.js"></script>
+    <script src="../assets/libs/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 
     <title>Casas Tombadas</title>
 </head>
 
 <?php
-include_once './helper/flashMessage/flash.php';
+include_once '../helper/flashMessage/flash.php';
 
 session_start();
 ?>
