@@ -1,3 +1,3 @@
 <?php
 
-echo "Oi";
+echo "Teste de autenticação";
