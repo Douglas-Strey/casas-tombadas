@@ -2,8 +2,8 @@
 
 session_start();
 
-include_once ("../database/conection.php");
-include_once ("../hooks/functions.php");
+include '../database/conexao.php';
+include_once '../hooks/functions.php';
 
 $btnLogin = filter_input(INPUT_POST, 'btnLogin', FILTER_SANITIZE_STRING);
 
