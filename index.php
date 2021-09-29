@@ -36,27 +36,6 @@ session_start();
         destroyFlash();
     endif;
     ?>
-    
-    <!-- <div class="wrapper fadeInDown">
-        <div id="formContent">
-
-            <div class="fadeIn first">
-                <img src="#" id="icon" alt="Logo" />
-            </div>
-
-            <form action="/src/auth/validateLogin.php" method="post">
-                <input type="text" id="userLogin" class="fadeIn second" name="userLogin" autocomplete="off" placeholder="Usu&aacute;rio" required>
-                <input type="password" id="userPassword" class="fadeIn third" name="userPassword" autocomplete="off" placeholder="Senha" required>
-                <input type="submit" name="btnLogin" class="fadeIn fourth signupToast" value="Entrar">
-            </form>
-
-            <div id="formFooter">
-                <a class="underlineHover" href="#">Esqueceu sua senha?</a>
-                <a class="underlineHover" href="/src/action/createAuth.php">Cadastre-se agora mesmo!</a>
-            </div>
-
-        </div>
-    </div> -->
 
     <div class="l-form">
             <div class="shape1"></div>
@@ -66,7 +45,7 @@ session_start();
                 <img src="/src/login/img/authentication.svg" alt="" class="form__img">
 
                 <form action="/src/auth/validateLogin.php" method="post" class="form__content">
-                    <h1 class="form__title">Welcome</h1>
+                    <h1 class="form__title">Bem vindo Dev</h1>
 
                     <div class="form__div form__div-one">
                         <div class="form__icon">
@@ -74,7 +53,7 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Username</label>
+                            <label for="" class="form__label">Nome</label>
                             <input type="text" class="form__input">
                         </div>
                     </div>
@@ -85,16 +64,16 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Password</label>
+                            <label for="" class="form__label">Senha</label>
                             <input type="password" class="form__input">
                         </div>
                     </div>
-                    <a href="#" class="form__forgot">Forgot Password?</a>
+                    <a href="#" class="form__forgot">Esqueceu a senha?</a>
 
                     <input type="submit" class="form__button" value="Login">
 
                     <div class="form__social">
-                        <span class="form__social-text">Our login with</span>
+                        <span class="form__social-text">Logar com outra conta</span>
 
                         
                     </div>
