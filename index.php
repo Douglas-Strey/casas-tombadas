@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/src/style/global.css" />
 
     <link rel="stylesheet" href="/src/login/style.css" />
-    <!-- <link rel="stylesheet" href="/src/style/custom.css" /> -->
 
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -54,7 +53,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Nome</label>
-                            <input type="text" class="form__input">
+                            <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
                         </div>
                     </div>
 
@@ -65,18 +64,15 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Senha</label>
-                            <input type="password" class="form__input">
+                            <input type="password" id="userPassword" name="userPassword" autocomplete="off" class="form__input">
                         </div>
                     </div>
-                    <a href="#" class="form__forgot">Esqueceu a senha?</a>
-
-                    <input type="submit" class="form__button" value="Login">
-
-                    <div class="form__social">
-                        <span class="form__social-text">Logar com outra conta</span>
-
-                        
+                    <div class="form__items">
+                        <a href="/src/action/createAuth.php" class="form__forgot">Criar Conta</a>
+                        <a href="#" class="form__forgot">Esqueceu a senha?</a>
                     </div>
+                    
+                    <input type="submit" name="btnLogin" class="form__button" value="Entrar">
                 </form>
             </div>
 
