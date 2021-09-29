@@ -52,7 +52,7 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Nome</label>
+                            <label for="" class="form__label">Nome de Usuário</label>
                             <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
                         </div>
                     </div>
