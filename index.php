@@ -10,8 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="/src/style/global.css" />
 
-    <link rel="stylesheet" href="/src/login/style.css" />
-    <!-- <link rel="stylesheet" href="/src/style/custom.css" /> -->
+    <link rel="stylesheet" href="/src/forms/login/style.css" />
 
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -36,37 +35,16 @@ session_start();
         destroyFlash();
     endif;
     ?>
-    
-    <!-- <div class="wrapper fadeInDown">
-        <div id="formContent">
-
-            <div class="fadeIn first">
-                <img src="#" id="icon" alt="Logo" />
-            </div>
-
-            <form action="/src/auth/validateLogin.php" method="post">
-                <input type="text" id="userLogin" class="fadeIn second" name="userLogin" autocomplete="off" placeholder="Usu&aacute;rio" required>
-                <input type="password" id="userPassword" class="fadeIn third" name="userPassword" autocomplete="off" placeholder="Senha" required>
-                <input type="submit" name="btnLogin" class="fadeIn fourth signupToast" value="Entrar">
-            </form>
-
-            <div id="formFooter">
-                <a class="underlineHover" href="#">Esqueceu sua senha?</a>
-                <a class="underlineHover" href="/src/action/createAuth.php">Cadastre-se agora mesmo!</a>
-            </div>
-
-        </div>
-    </div> -->
 
     <div class="l-form">
             <div class="shape1"></div>
             <div class="shape2"></div>
 
             <div class="form">
-                <img src="/src/login/img/authentication.svg" alt="" class="form__img">
+                <img src="/src/forms/login/img/authentication.svg" alt="" class="form__img">
 
                 <form action="/src/auth/validateLogin.php" method="post" class="form__content">
-                    <h1 class="form__title">Welcome</h1>
+                    <h1 class="form__title">Bem vindo Dev</h1>
 
                     <div class="form__div form__div-one">
                         <div class="form__icon">
@@ -74,8 +52,8 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Username</label>
-                            <input type="text" class="form__input">
+                            <label for="" class="form__label">Nome de Usuário</label>
+                            <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
                         </div>
                     </div>
 
@@ -85,26 +63,23 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Password</label>
-                            <input type="password" class="form__input">
+                            <label for="" class="form__label">Senha</label>
+                            <input type="password" id="userPassword" name="userPassword" autocomplete="off" class="form__input">
                         </div>
                     </div>
-                    <a href="#" class="form__forgot">Forgot Password?</a>
-
-                    <input type="submit" class="form__button" value="Login">
-
-                    <div class="form__social">
-                        <span class="form__social-text">Our login with</span>
-
-                        
+                    <div class="form__items">
+                        <a href="/src/forms/createAuth/createAuth.php" class="form__forgot">Criar Conta</a>
+                        <a href="#" class="form__forgot">Esqueceu a senha?</a>
                     </div>
+                    
+                    <input type="submit" name="btnLogin" class="form__button" value="Entrar">
                 </form>
             </div>
 
         </div>
         
         <!-- ===== MAIN JS ===== -->
-        <script src="/src/login/main.js"></script>
+        <script src="/src/forms/login/main.js"></script>
 
 
     <script src="./src/assets/libs/jquery/jquery.min.js"></script>
