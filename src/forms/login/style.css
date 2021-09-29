@@ -7,6 +7,7 @@
 :root{
     --first-color: #12192C;
     --text-color: #8590AD;
+    --hover-color: #24285B;
 }
 
 /*=== Fuente y tipografia ===*/
@@ -159,7 +160,7 @@ img{
     font-weight: 500;
 }
 .form__forgot:hover{
-    color: var(--first-color);
+    color: var(--hover-color);
     transition: .5s;
 }
 .form__button{

@@ -23,7 +23,7 @@ if ($btnLogin) :
                 $_SESSION['nome'] = $row_usuario['nome'];
                 $_SESSION['email'] = $row_usuario['email'];
 
-                header("Location: /src/pages/casasTombadas.php");
+                header("Location: /src/pages/cadastroCasas.php");
             else :
                 redirectAuthPage(["Usuário e/ou senha incorreto!", "alertCustomClass"]);
             endif;

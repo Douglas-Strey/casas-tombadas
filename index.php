@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="/src/style/global.css" />
 
-    <link rel="stylesheet" href="/src/login/style.css" />
+    <link rel="stylesheet" href="/src/forms/login/style.css" />
 
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -41,7 +41,7 @@ session_start();
             <div class="shape2"></div>
 
             <div class="form">
-                <img src="/src/login/img/authentication.svg" alt="" class="form__img">
+                <img src="/src/forms/login/img/authentication.svg" alt="" class="form__img">
 
                 <form action="/src/auth/validateLogin.php" method="post" class="form__content">
                     <h1 class="form__title">Bem vindo Dev</h1>
@@ -52,7 +52,7 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Nome</label>
+                            <label for="" class="form__label">Nome de Usuário</label>
                             <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
                         </div>
                     </div>
@@ -68,7 +68,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form__items">
-                        <a href="/src/action/createAuth.php" class="form__forgot">Criar Conta</a>
+                        <a href="/src/forms/createAuth/createAuth.php" class="form__forgot">Criar Conta</a>
                         <a href="#" class="form__forgot">Esqueceu a senha?</a>
                     </div>
                     
@@ -79,7 +79,7 @@ session_start();
         </div>
         
         <!-- ===== MAIN JS ===== -->
-        <script src="/src/login/main.js"></script>
+        <script src="/src/forms/login/main.js"></script>
 
 
     <script src="./src/assets/libs/jquery/jquery.min.js"></script>
