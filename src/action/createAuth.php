@@ -49,7 +49,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Nome Completo</label>
-                            <input type="text" id="newUserName" class="form__input" name="newUserName" required>
+                            <input type="text" id="newUserName" class="form__input" name="newUserName" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Nome de Usuário</label>
-                            <input type="text" id="newUserLogin" class="form__input" name="newUserLogin" required>
+                            <input type="text" id="newUserLogin" class="form__input" name="newUserLogin" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">E-mail</label>
-                            <input type="text" id="newUserEmail" class="form__input" name="newUserEmail" required>
+                            <input type="text" id="newUserEmail" class="form__input" name="newUserEmail" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -82,14 +82,14 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Password</label>
-                            <input type="password" id="newPassword" class="form__input" name="newPassword" required>
+                            <input type="password" id="newPassword" class="form__input" name="newPassword" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="form__items">
                         <a href="/" class="form__forgot">Já possui login? Clique aqui!</a>
                     </div>
                     
-                    <input type="submit" class="form__button" value="Criar Conta">
+                    <input type="submit" name="btnRegister" class="form__button" value="Criar Conta">
                 </form>
             </div>
 

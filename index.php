@@ -74,7 +74,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Username</label>
-                            <input type="text" class="form__input">
+                            <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Password</label>
-                            <input type="password" class="form__input">
+                            <input type="password" id="userPassword" name="userPassword" autocomplete="off" class="form__input">
                         </div>
                     </div>
                     <div class="form__items">
@@ -93,7 +93,7 @@ session_start();
                         <a href="#" class="form__forgot">Forgot Password?</a>
                     </div>
                     
-                    <input type="submit" class="form__button" value="Login">
+                    <input type="submit" name="btnLogin" class="form__button" value="Entrar">
                 </form>
             </div>
 
