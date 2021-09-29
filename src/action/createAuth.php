@@ -9,8 +9,11 @@
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="../style/global.css" />
-    <link rel="stylesheet" href="../style/custom.css" />
+    
+    <link rel="stylesheet" href="./createAuth/style.css" />
 
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <script src="../assets/libs/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
@@ -29,28 +32,71 @@ session_start();
     include '../template/navbar.phtml';
     ?>
 
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
+    <div class="l-form">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
 
-            <div class="fadeIn first">
-                <img src="#" id="icon" alt="Logo" />
-                <span>Cadastro de usuário</span>
-            </div>
+            <div class="form">
+                <img src="./createAuth/img/authentication-two.svg" alt="" class="form__img">
 
-            <form action="../auth/validateRegister.php" method="POST">
-                <input type="text" id="newUserName" class="fadeIn second" name="newUserName" placeholder="Nome Completo" required>
-                <input type="text" id="newUserLogin" class="fadeIn second" name="newUserLogin" placeholder="Usu&aacute;rio" required>
-                <input type="text" id="newUserEmail" class="fadeIn second" name="newUserEmail" placeholder="E-mail" required>
-                <input type="password" id="newPassword" class="fadeIn third" name="newPassword" placeholder="Senha" required>
-                <input type="submit" name="btnRegister" class="fadeIn fourth signupToast" value="Cadastrar">
-            </form>
+                <form action="../auth/validateRegister.php" method="post" class="form__content">
+                    <h1 class="form__title">Criar Conta</h1>
 
-            <div id="formFooter">
-                <a class="underlineHover" href="/index.php">Já tem um login? entre aqui</a>
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-user'></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Nome Completo</label>
+                            <input type="text" id="newUserName" class="form__input" name="newUserName" required>
+                        </div>
+                    </div>
+
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-user-circle'></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Nome de Usuário</label>
+                            <input type="text" id="newUserLogin" class="form__input" name="newUserLogin" required>
+                        </div>
+                    </div>
+
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-mail-send' ></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">E-mail</label>
+                            <input type="text" id="newUserEmail" class="form__input" name="newUserEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-lock' ></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Password</label>
+                            <input type="password" id="newPassword" class="form__input" name="newPassword" required>
+                        </div>
+                    </div>
+                    <div class="form__items">
+                        <a href="/" class="form__forgot">Já possui login? Clique aqui!</a>
+                    </div>
+                    
+                    <input type="submit" class="form__button" value="Criar Conta">
+                </form>
             </div>
 
         </div>
-    </div>
+        
+        <!-- ===== MAIN JS ===== -->
+        <script src="./createAuth/main.js"></script>
 
     <script src="../assets/libs/jquery/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

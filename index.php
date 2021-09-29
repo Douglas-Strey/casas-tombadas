@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/src/style/global.css" />
 
     <link rel="stylesheet" href="/src/login/style.css" />
-    <!-- <link rel="stylesheet" href="/src/style/custom.css" /> -->
 
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -89,15 +88,12 @@ session_start();
                             <input type="password" class="form__input">
                         </div>
                     </div>
-                    <a href="#" class="form__forgot">Forgot Password?</a>
-
-                    <input type="submit" class="form__button" value="Login">
-
-                    <div class="form__social">
-                        <span class="form__social-text">Our login with</span>
-
-                        
+                    <div class="form__items">
+                        <a href="/src/action/createAuth.php" class="form__forgot">Criar Conta</a>
+                        <a href="#" class="form__forgot">Forgot Password?</a>
                     </div>
+                    
+                    <input type="submit" class="form__button" value="Login">
                 </form>
             </div>
 
