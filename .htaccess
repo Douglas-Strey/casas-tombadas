@@ -1,0 +1,5 @@
+#### Redirecionamento Customizado ####
+
+Redirect permanent /login https://casas-tombadas-pac.vercel.app/index.html
+Redirect permanent /cadastrousuario https://casas-tombadas-pac.vercel.app/src/forms/createAuth/createAuth.php
+Redirect permanent /cadastrocasaroes https://casas-tombadas-pac.vercel.app/src/pages/cadastroCasas.php
