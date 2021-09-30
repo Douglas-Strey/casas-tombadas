@@ -8,8 +8,14 @@
 
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    
+    <!-- ===== STYLE GLOBAL ===== -->
     <link rel="stylesheet" href="../style/global.css" />
 
+    <!-- ===== STYLE DO ALERT ===== -->
+    <link rel="stylesheet" href="../style/alertStyle.css" />
+
+    <!-- ===== STYLE DO FORM ===== -->
     <link rel="stylesheet" href="../forms/registerHouse/style.css" />
 
     <!-- ===== BOX ICONS ===== -->
@@ -23,6 +29,7 @@
 
 <?php
 include_once '../helper/flashMessage/flash.php';
+include '../hooks/functions.php';
 
 session_start();
 ?>
@@ -30,10 +37,8 @@ session_start();
 <body>
     <?php
     include_once '../template/navbar-index.phtml';
-    if (isset($_SESSION['flash_message'])) :
-        getFlash();
-        destroyFlash();
-    endif;
+    
+    checkLogin();
     ?>
 
 <div class="l-form">
@@ -92,7 +97,7 @@ session_start();
                     </div>
 
                     <div class="form__items">
-                        <a href="/" class="form__forgot">Visualizar Casas Cadastradas</a>
+                        <a href="./casasTombadas.php" class="form__forgot">Visualizar Casas Cadastradas</a>
                     </div>
                     
                     <input type="submit" name="btnRegister" class="form__button" value="Criar Conta">

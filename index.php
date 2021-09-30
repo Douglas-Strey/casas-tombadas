@@ -8,8 +8,14 @@
 
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    
+    <!-- ===== STYLE GLOBAL ===== -->
     <link rel="stylesheet" href="/src/style/global.css" />
 
+    <!-- ===== STYLE ALERTAS ===== -->
+    <link rel="stylesheet" href="/src/style/alertStyle.css" />
+
+    <!-- ===== STYLE DO FORM ===== -->
     <link rel="stylesheet" href="/src/forms/login/style.css" />
 
     <!-- ===== BOX ICONS ===== -->
@@ -29,9 +35,10 @@ session_start();
 
 <body>
     <?php
-    include_once './src/template/navbar-index.phtml';
+    include './src/template/navbar-index.phtml';
+
     if (isset($_SESSION['flash_message'])) :
-        getFlash();
+        echo getFlash();
         destroyFlash();
     endif;
     ?>
@@ -53,7 +60,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Nome de Usuário</label>
-                            <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input">
+                            <input type="text" id="userLogin" name="userLogin" autocomplete="off" class="form__input" required>
                         </div>
                     </div>
 
@@ -64,7 +71,7 @@ session_start();
 
                         <div class="form__div-input">
                             <label for="" class="form__label">Senha</label>
-                            <input type="password" id="userPassword" name="userPassword" autocomplete="off" class="form__input">
+                            <input type="password" id="userPassword" name="userPassword" autocomplete="off" class="form__input" required>
                         </div>
                     </div>
                     <div class="form__items">
@@ -78,14 +85,11 @@ session_start();
 
         </div>
         
-        <!-- ===== MAIN JS ===== -->
-        <script src="/src/forms/login/main.js"></script>
+        
+    <!-- ===== MAIN JS ===== -->
+    <script src="/src/forms/login/main.js"></script>
 
-
-    <script src="./src/assets/libs/jquery/jquery.min.js"></script>
-    <script src="./src/assets/libs/sweetAlert/sweetalert2.all.min.js"></script>
     <script src="./src/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./src/js/auth.js"></script>
 </body>
 
 </html>
