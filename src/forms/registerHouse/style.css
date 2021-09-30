@@ -149,6 +149,13 @@ img{
     color: var(--first-color);
     transition: .3s;
 }
+input[type=file] {
+    font-size: 12px;
+    width: 85%;
+    border: none;
+
+    margin-top: -5px;
+}
 .form__items {
     display: flex;
     justify-content: space-between;
@@ -178,6 +185,11 @@ img{
 }
 .form__button:hover{
     box-shadow: 0px 15px 36px rgba(0,0,0,.15);
+}
+
+.text_area {
+    resize: none;
+    overflow: hidden;
 }
 
 /* === Form social===

@@ -20,11 +20,11 @@ function redirectRegisterPage(array $params)
     header("Location: ../foms/createAuth/createAuth.php");
 }
 
-function redirectProductData(array $params)
+function redirectCasaraoCadastro(array $params)
 {
     setFlash([$params[0], $params[1]]);
 
-    header("Location: ../pages/productsData.php");
+    header("Location: ../pages/cadastroCasas.php");
 }
 
 function checkLogin()

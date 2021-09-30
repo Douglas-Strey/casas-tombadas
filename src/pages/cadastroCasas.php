@@ -38,6 +38,11 @@ session_start();
     <?php
     include_once '../template/navbar-index.phtml';
     
+    if (isset($_SESSION['flash_message'])) :
+        echo getFlash();
+        destroyFlash();
+    endif;
+
     checkLogin();
     ?>
 
@@ -48,7 +53,7 @@ session_start();
             <div class="form">
                 <img src="../forms/registerHouse/img/casa-svg.svg" alt="" class="form__img">
 
-                <form action="../../auth/validateRegister.php" method="post" class="form__content">
+                <form enctype="multipart/form-data" action="../auth/validateCasarao.php" method="post" class="form__content">
                     <h1 class="form__title">Cadastrar Casarão</h1>
 
                     <div class="form__div">
@@ -57,8 +62,8 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Nome</label>
-                            <input type="text" id="newUserName" class="form__input" name="newUserName" autocomplete="off" required>
+                            <label for="casaraoNome" class="form__label">Nome</label>
+                            <input type="text" id="casaraoNome" class="form__input" name="casaraoNome" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -68,19 +73,18 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Foto</label>
-                            <input type="text" id="newUserName" class="form__input" name="newUserName" autocomplete="off" required>
+                            <input type="file" id="casaraoFoto" class="form__input" name="casaraoFoto" autocomplete="off" required>
                         </div>
                     </div>
 
                     <div class="form__div">
                         <div class="form__icon">
-                            <i class='bx bx-camera' ></i>
+                            <i class='bx bx-map'></i>
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Endereço</label>
-                            <input type="text" id="newUserName" class="form__input" name="newUserName" autocomplete="off" required>
+                            <label for="casaraoEndereco" class="form__label">Endereço</label>
+                            <input type="text" id="casaraoEndereco" class="form__input" name="casaraoEndereco" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -90,17 +94,16 @@ session_start();
                         </div>
 
                         <div class="form__div-input">
-                            <label for="" class="form__label">Descrição</label>
-                            <textarea id="newUserName" class="form__input" name="newUserName" autocomplete="off" required></textarea>
-                            <!-- <input type="textarea" id="newUserName" class="form__input" name="newUserName" autocomplete="off" required> -->
+                            <label for="casaraoDescricao" class="form__label">Descrição</label>
+                            <textarea id="casaraoDescricao" class="form__input text_area" name="casaraoDescricao" autocomplete="off" required></textarea>
                         </div>
                     </div>
 
                     <div class="form__items">
-                        <a href="./casasTombadas.php" class="form__forgot">Visualizar Casas Cadastradas</a>
+                        <a href="./casasTombadas.php" class="form__forgot">Visualizar Casarões Cadastrados</a>
                     </div>
                     
-                    <input type="submit" name="btnRegister" class="form__button" value="Criar Conta">
+                    <input type="submit" name="btnRegisterCasarao" class="form__button" value="Cadastrar Casarão">
                 </form>
             </div>
 
