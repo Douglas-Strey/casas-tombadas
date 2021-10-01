@@ -1,5 +1,5 @@
 #### Redirecionamento Customizado ####
 
-Redirect permanent /login https://casas-tombadas-pac.netlify.app/index.html
-Redirect permanent /cadastrousuario https://casas-tombadas-pac.netlify.app/src/forms/createAuth/createAuth.php
-Redirect permanent /cadastrocasaroes https://casas-tombadas-pac.netlify.app/src/pages/cadastroCasas.php
+Redirect permanent /login https://casas-tombadas.herokuapp.com/index.html
+Redirect permanent /cadastrousuario https://casas-tombadas.herokuapp.com/src/forms/createAuth/createAuth.php
+Redirect permanent /cadastrocasaroes https://casas-tombadas.herokuapp.com/src/pages/cadastroCasas.php
