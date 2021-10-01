@@ -10,21 +10,28 @@ function redirectAuthPage(array $params)
 {
     setFlash([$params[0], $params[1]]);
 
-    header("Location: ../action/auth.php");
+    header("Location: /");
 }
 
 function redirectRegisterPage(array $params)
 {
     setFlash([$params[0], $params[1]]);
 
-    header("Location: ../action/createAuth.php");
+    header("Location: ../foms/createAuth/createAuth.php");
 }
 
-function redirectProductData(array $params)
+function redirectCasaraoCadastro(array $params)
 {
     setFlash([$params[0], $params[1]]);
 
-    header("Location: ../pages/productsData.php");
+    header("Location: ../pages/cadastroCasas.php");
+}
+
+function redirectCasaraoData(array $params)
+{
+    setFlash([$params[0], $params[1]]);
+
+    header("Location: ../pages/casasTombadas.php");
 }
 
 function checkLogin()
@@ -34,7 +41,7 @@ function checkLogin()
         <button type='button' class='btn-close align-middle' data-bs-dismiss='alert' aria-label='Close'></button>
         </div>";
     else :
-        redirectAuthPage(["Você precisa estar logado para acessar esta página!", "dangerCustomClass"]);
+        redirectAuthPage(["Você precisa estar autenticado para acessar esta página!", "dangerCustomClass"]);
     endif;
 
     return;

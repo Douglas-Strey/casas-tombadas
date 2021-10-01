@@ -5,7 +5,7 @@ function setFlash(array $flash)
     $_SESSION['flash_message'] = $flash[0];
     $_SESSION['class'] = $flash[1];
 
-    return;
+    return $_SESSION;
 }
 
 function getFlash()
