@@ -37,10 +37,10 @@ checkLoginData();
     <?php
     include_once '../template/navbar-index.phtml';
 
-    // if (isset($_SESSION['flash_message'])) :
-    //     echo getFlash();
-    //     destroyFlash();
-    // endif;
+    if (isset($_SESSION['flash_message'])) :
+        echo getFlash();
+        destroyFlash();
+    endif;
     ?>
 
     <div class="row m-0">
@@ -52,6 +52,8 @@ checkLoginData();
         if ($result->num_rows > 0) {
             setFlash(["Consulta realizada com sucesso!", "successCustomClass"]);
             echo getFlash();
+            destroyFlash();
+
             while ($row = $result->fetch_assoc()) {
         ?>
                 <div class="col-lg-4">
@@ -65,7 +67,7 @@ checkLoginData();
                             <img class="img-fluid" src="data:image/png;base64,<?= $row['img'] ?>" alt="" style="width:300px"> <br>
                             <span>
                                 <button class="border-0 btn btn-danger mt-2 buton-delete">
-                                    <a class="text-white" href="../database/deleteProduct.php?produto_id='<?= $row['id'] ?>'">
+                                    <a class="text-white" href="../database/deleteCasarao.php?casarao_id='<?= $row['id'] ?>'">
                                         Apagar Casarão
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
@@ -80,15 +82,15 @@ checkLoginData();
         <?php
             }
         } else {
-            setFlash(["Nenhum produto cadastrado", "alertCustomClass"]);
+            setFlash(["Nenhum casarão cadastrado :(", "alertCustomClass"]);
             echo getFlash();
+            destroyFlash();
         }
         $mysqli->close();
-        destroyFlash();
         ?>
     </div>
     <div class="mt-5 ms-3">
-        <a class="btn btn-primary" href="../pages/cadastroCasas.php">Voltar</a>
+        <a class="btn btn-color text-white" href="../pages/cadastroCasas.php">Voltar</a>
     </div>
     <script src="../assets/libs/jquery/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -27,6 +27,13 @@ function redirectCasaraoCadastro(array $params)
     header("Location: ../pages/cadastroCasas.php");
 }
 
+function redirectCasaraoData(array $params)
+{
+    setFlash([$params[0], $params[1]]);
+
+    header("Location: ../pages/casasTombadas.php");
+}
+
 function checkLogin()
 {
     if (!empty($_SESSION['id'])) :
