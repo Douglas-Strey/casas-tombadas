@@ -1,0 +1,29 @@
+.bg__colors {
+    background: #3E505B;
+    color: #FFF;
+}
+
+.card {
+    border: none;
+}
+
+.justify__text {
+    text-align: justify;
+}
+
+.justify__textAlign {
+    justify-content: space-around;
+}
+
+.icon__map {
+    /* width: 20%; */
+    color: #FFF;
+}
+
+.icon__mapView {
+    color: #FFF;
+}
+
+.icon__text {
+    color: #FFF;
+}
