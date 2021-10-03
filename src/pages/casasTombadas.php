@@ -12,6 +12,9 @@
     <!-- ===== STYLE GLOBAL ===== -->
     <link rel="stylesheet" href="../style/global.css" />
 
+    <!-- ===== STYLE DAS CASAS ===== -->
+    <link rel="stylesheet" href="../style/casasView.css" />
+
     <!-- ===== STYLE DO ALERT ===== -->
     <link rel="stylesheet" href="../style/alertStyle.css" />
 
@@ -56,17 +59,27 @@ checkLoginData();
 
             while ($row = $result->fetch_assoc()) {
         ?>
-                <div class="col-lg-4">
-                    <div class="card w-100">
-                        <div class="card-header">
+                <div class="col-lg-4 mt-3">
+                    <div class="card w-100 bg__colors text-center">
+                        <div class="card-header border border-light border-4">
                             <h4 class="mb-0 fs-3 fw-bold"><?= $row['nome'] ?></h4>
                         </div>
                         <div class="card-body">
-                            <span class="fs-5 fw-normal"><?= $row['descricao'] ?></span><br />
-                            <span class="fs-5 fw-normal"><?= $row['endereco'] ?></span><br />
-                            <img class="img-fluid" src="data:image/png;base64,<?= $row['img'] ?>" alt="" style="width:300px"> <br>
+                            <div class="card-header justify__text d-flex ">
+                                <div class="form__icon">
+                                    <i class='bx bx-text icon__text'></i>
+                                </div>
+                                <span class="fs-5 fw-normal"><?= $row['descricao'] ?></span><br />
+                            </div>
+                            <div class="card-header d-flex justify__textAlign">
+                                <div class="form__icon icon__map">
+                                    <i class='bx bx-map icon__mapView'></i>
+                                </div>
+                                <span class="fs-5 fw-normal text-center"><?= $row['endereco'] ?></span><br />
+                            </div>
+                            <img class="img-fluid mt-4" src="data:image/png;base64,<?= $row['img'] ?>" alt="" style="width:500px"> <br>
                             <span>
-                                <button class="border-0 btn btn-danger mt-2 buton-delete">
+                                <button class="border-0 btn btn-danger mt-4 buton-delete">
                                     <a class="text-white" href="../database/deleteCasarao.php?casarao_id='<?= $row['id'] ?>'">
                                         Apagar Casarão
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -89,7 +102,7 @@ checkLoginData();
         $mysqli->close();
         ?>
     </div>
-    <div class="mt-5 ms-3">
+    <div class="mt-3 ms-3 mb-3">
         <a class="btn btn-color text-white" href="../pages/cadastroCasas.php">Voltar</a>
     </div>
     <script src="../assets/libs/jquery/jquery.min.js"></script>
