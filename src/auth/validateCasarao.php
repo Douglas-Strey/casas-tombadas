@@ -16,6 +16,7 @@ if ($btnRegisterCasarao) :
         $casaraoDescricao = $casarao['casaraoDescricao'];
         $casaraoCidade = $casarao['casaraoCidade'];
         $casaraoEstado = $casarao['casaraoEstado'];
+        $casaraoBairro = $casarao['casaraoBairro'];
 
         if ($casaraoFoto) :
             $casaraoBase64 = base64_encode(file_get_contents($casaraoFoto));
@@ -23,9 +24,9 @@ if ($btnRegisterCasarao) :
             $casaraoBase64 = null;
         endif;
 
-        $query = "INSERT INTO casaroes (nome, img, endereco, descricao, cidade, estado) VALUES (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO casaroes (nome, img, endereco, descricao, cidade, estado, bairro) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $data = $mysqli->prepare($query);
-        $data->bind_param("ssssss", $casaraoNome, $casaraoBase64, $casaraoEndereco, $casaraoDescricao, $casaraoCidade, $casaraoEstado);
+        $data->bind_param("sssssss", $casaraoNome, $casaraoBase64, $casaraoEndereco, $casaraoDescricao, $casaraoCidade, $casaraoEstado, $casaraoBairro);
         $data->execute();
 
         redirectCasaraoCadastro(["Casarão cadastrado com sucesso!", "successCustomClass"]);

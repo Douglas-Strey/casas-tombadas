@@ -71,11 +71,29 @@ checkLoginData();
                                 </div>
                                 <span class="fs-5 fw-normal"><?= $row['descricao'] ?></span><br />
                             </div>
+
+                            <div class="card-header d-flex justify__textAlign">
+                                <div class="form__icon icon__map">
+                                    <i class='bx bxs-city icon__mapView'></i>
+                                </div>
+                                <span class="fs-5 fw-normal text-center"><?= $row['cidade'] ?></span><br />
+
+                                <div class="form__icon icon__map">
+                                    <i class='bx bx-flag icon__mapView'></i>
+                                </div>
+                                <span class="fs-5 fw-normal text-center"><?= $row['estado'] ?></span><br />
+                            </div>
+
                             <div class="card-header d-flex justify__textAlign">
                                 <div class="form__icon icon__map">
                                     <i class='bx bx-map icon__mapView'></i>
                                 </div>
                                 <span class="fs-5 fw-normal text-center"><?= $row['endereco'] ?></span><br />
+
+                                <div class="form__icon icon__map">
+                                    <i class='bx bxs-building-house icon__mapView'></i>
+                                </div>
+                                <span class="fs-5 fw-normal text-center"><?= $row['bairro'] ?></span><br />
                             </div>
                             <img class="img-fluid mt-4" src="data:image/png;base64,<?= $row['img'] ?>" alt="" style="width:500px"> <br>
                             <span>
