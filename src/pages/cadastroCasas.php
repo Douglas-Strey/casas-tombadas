@@ -84,7 +84,7 @@ session_start();
 
                     <div class="form__div-input">
                         <label for="casaraoEndereco" class="form__label">Endereço</label>
-                        <input type="text" id="casaraoEndereco" class="form__input" name="casaraoEndereco" autocomplete="off" required>
+                        <input type="text" id="casaraoEndereco" class="form__input" name="casaraoEndereco" autocomplete="off" maxlength="40" required>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@ session_start();
 
                     <div class="form__div-input">
                         <label for="casaraoDescricao" class="form__label">Descrição</label>
-                        <textarea id="casaraoDescricao" class="form__input text_area" name="casaraoDescricao" autocomplete="off" required></textarea>
+                        <textarea id="casaraoDescricao" class="form__input text_area" name="casaraoDescricao" autocomplete="off" maxlength="650" required></textarea>
                     </div>
                 </div>
 
