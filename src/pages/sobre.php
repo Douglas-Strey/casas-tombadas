@@ -52,21 +52,26 @@
                 <p class="mt-2 fs-5 text-center text-decoration-underline">Tecnologias utilizadas</p>
 
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://www.php.net/">PHP</a>: Utilizado para autenticação com banco de dados, envio de logins 
+                    href="https://www.php.net/" target="_blank">PHP</a>: Utilizado para autenticação com banco de dados, envio de logins 
                     e forms e toda conexão server-side necessária.
                 </p>
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://getbootstrap.com/">Bootstrap</a>: Utilizado para montar toda a estrutura do site.
+                    href="https://getbootstrap.com/" target="_blank">Bootstrap</a>: Utilizado para montar toda a estrutura do site.
                 </p>
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://boxicons.com/">BOXICONS</a>: Banco dos ícones utilizados na aplicação.</p>
+                    href="https://boxicons.com/" target="_blank">BOXICONS</a>: Banco dos ícones utilizados na aplicação.</p>
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://boxicons.com/">JavaScript</a>: Utilizado para alguns efeitos.</p>
+                    href="https://boxicons.com/" target="_blank">JavaScript</a>: Utilizado para alguns efeitos.</p>
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://heroku.com/">Heroku</a>: Servidor utilizado para hospedar o site gratuitamente.</p>
+                    href="https://heroku.com/" target="_blank">Heroku</a>: Servidor utilizado para hospedar o site gratuitamente.</p>
                 <p><i class='bx bxs-chevron-right align-baseline'></i><a class="text-info text-decoration-underline" 
-                    href="https://www.cleardb.com/">ClearDB MySql</a>: Servidor de banco de dados utilizado para 
+                    href="https://www.cleardb.com/" target="_blank">ClearDB MySql</a>: Servidor de banco de dados utilizado para 
                     armazenar as informações sobre as casas/edifícios.
+                </p>
+
+                <p><i class='bx bxs-chevron-right align-baseline mt-5'></i><a class="text-info text-decoration-underline" 
+                    href="https://github.com/Douglas-Strey/casas-tombadas" target="_blank">Github</a>: Utilizado para hospedar o projeto, 
+                    gerenciar as branches, realizar o merge e pull request.
                 </p>
             </div>
         </div>
