@@ -36,7 +36,7 @@ session_start();
 
 <body>
     <?php
-    include_once '../template/navbar-index.phtml';
+    include_once '../template/navbar-login.phtml';
 
     if (isset($_SESSION['flash_message'])) :
         echo getFlash();
